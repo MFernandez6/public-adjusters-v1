@@ -371,7 +371,7 @@ export default function ServicesPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     asChild
-                    className="bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                    className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                     size="lg"
                   >
                     <Link href="/contact">Get Free Evaluation</Link>
@@ -380,7 +380,7 @@ export default function ServicesPage() {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
+                    className="border-white/30 text-white hover:bg-white/20 hover:border-white/50 transition-all duration-300 transform hover:scale-105"
                   >
                     <Link href="tel:786-417-3869">
                       <Phone className="h-4 w-4 mr-2" />

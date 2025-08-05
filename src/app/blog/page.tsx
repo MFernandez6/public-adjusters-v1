@@ -147,7 +147,7 @@ export default function BlogPage() {
                     </div>
                     <Button
                       asChild
-                      className="bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                      className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                     >
                       <Link href="/blog/hurricane-guide">
                         Read Full Article
@@ -236,7 +236,7 @@ export default function BlogPage() {
                       className="flex-1 px-4 py-2 rounded-md bg-white/20 border border-white/20 text-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                     <Button
-                      className="bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                      className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                       size="lg"
                     >
                       Subscribe

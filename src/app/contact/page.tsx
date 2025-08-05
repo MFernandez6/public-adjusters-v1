@@ -178,7 +178,7 @@ export default function ContactPage() {
 
                     <Button
                       type="submit"
-                      className="w-full bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                      className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                       size="lg"
                     >
                       Send Message
@@ -279,7 +279,7 @@ export default function ContactPage() {
                     <Button
                       asChild
                       variant="secondary"
-                      className="w-full bg-white text-primary hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                      className="w-full bg-gradient-to-r from-white to-gray-50 text-primary hover:from-gray-50 hover:to-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                       size="lg"
                     >
                       <a href="tel:786-417-3869">

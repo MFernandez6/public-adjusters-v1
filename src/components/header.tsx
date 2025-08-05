@@ -83,7 +83,7 @@ export function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <Button
               asChild
-              className="bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <Link href="tel:786-417-3869">
                 <Phone className="h-4 w-4 mr-2" />
@@ -98,7 +98,7 @@ export function Header() {
               <Button
                 variant="outline"
                 size="icon"
-                className="border-white text-white hover:bg-white hover:text-primary"
+                className="border-white/30 text-white hover:bg-white/20 hover:border-white/50 transition-all duration-300"
               >
                 <Menu className="h-4 w-4" />
               </Button>
@@ -141,7 +141,7 @@ export function Header() {
                 <div className="pt-4 border-t border-white/20">
                   <Button
                     asChild
-                    className="w-full bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <Link href="tel:786-417-3869">
                       <Phone className="h-4 w-4 mr-2" />
