@@ -57,7 +57,7 @@ export default function ServicesPage() {
         <div className="py-20">
           <div className="container mx-auto px-4">
             {/* Header */}
-            <div className="text-center space-y-6 mb-12">
+            <div className="text-center space-y-6 mb-12 animate-fade-in-up">
               <h1 className="text-4xl lg:text-5xl font-bold text-white">
                 Our Services
               </h1>
@@ -70,20 +70,20 @@ export default function ServicesPage() {
 
             {/* Property Damage Claims */}
             <section className="mb-16">
-              <div className="text-center space-y-6 mb-12">
+              <div className="text-center space-y-4 mb-12 animate-fade-in-up animation-delay-100">
                 <h2 className="text-3xl font-bold text-white">
                   Property Damage Claims
                 </h2>
-                <p className="text-xl text-gray-200">
+                <p className="text-lg text-gray-200">
                   Comprehensive coverage for all types of property damage
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <Card className="border-0 shadow-xl bg-white/10 backdrop-blur-md border border-white/20 hover:shadow-2xl transition-shadow">
+                <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-200">
                   <CardHeader>
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                      <Flame className="h-6 w-6 text-primary-outline" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                      <Flame className="h-6 w-6 text-white" />
                     </div>
                     <CardTitle className="text-white">Fire Damage</CardTitle>
                   </CardHeader>
@@ -115,10 +115,10 @@ export default function ServicesPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-0 shadow-xl bg-white/10 backdrop-blur-md border border-white/20 hover:shadow-2xl transition-shadow">
+                <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-300">
                   <CardHeader>
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                      <Droplets className="h-6 w-6 text-primary-outline" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                      <Droplets className="h-6 w-6 text-white" />
                     </div>
                     <CardTitle className="text-white">Water Damage</CardTitle>
                   </CardHeader>
@@ -150,17 +150,17 @@ export default function ServicesPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-0 shadow-xl bg-white/10 backdrop-blur-md border border-white/20 hover:shadow-2xl transition-shadow">
+                <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-400">
                   <CardHeader>
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                      <Wind className="h-6 w-6 text-primary-outline" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                      <Wind className="h-6 w-6 text-white" />
                     </div>
                     <CardTitle className="text-white">Storm Damage</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-200 mb-4">
-                      Hurricane, tornado, and storm damage claims with
-                      comprehensive documentation and assessment.
+                      Hurricane, tornado, and storm damage claims. We document
+                      all damage for maximum recovery.
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
@@ -172,7 +172,7 @@ export default function ServicesPage() {
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-primary-outline" />
                         <span className="text-gray-200">
-                          Wind damage documentation
+                          Window and siding damage
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
@@ -184,108 +184,101 @@ export default function ServicesPage() {
                     </ul>
                   </CardContent>
                 </Card>
+              </div>
+            </section>
 
-                <Card className="border-0 shadow-xl bg-white/10 backdrop-blur-md border border-white/20 hover:shadow-2xl transition-shadow">
+            {/* Business Claims */}
+            <section className="mb-16">
+              <div className="text-center space-y-4 mb-12 animate-fade-in-up animation-delay-500">
+                <h2 className="text-3xl font-bold text-white">
+                  Business Claims
+                </h2>
+                <p className="text-lg text-gray-200">
+                  Protecting your business and livelihood
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-600">
                   <CardHeader>
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                      <Zap className="h-6 w-6 text-primary-outline" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                      <Building className="h-6 w-6 text-white" />
                     </div>
                     <CardTitle className="text-white">
-                      Lightning Damage
+                      Commercial Property
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-200 mb-4">
-                      Electrical damage from lightning strikes, power surges,
-                      and related electrical system failures.
+                      Complete commercial property damage assessment and
+                      business interruption claim handling.
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-primary-outline" />
                         <span className="text-gray-200">
-                          Electrical system damage
+                          Building damage assessment
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-primary-outline" />
                         <span className="text-gray-200">
-                          Appliance damage assessment
+                          Equipment and inventory loss
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-primary-outline" />
                         <span className="text-gray-200">
-                          Power surge protection
+                          Business interruption claims
+                        </span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <span className="text-gray-200">
+                          Extra expense coverage
                         </span>
                       </li>
                     </ul>
                   </CardContent>
                 </Card>
 
-                <Card className="border-0 shadow-xl bg-white/10 backdrop-blur-md border border-white/20 hover:shadow-2xl transition-shadow">
+                <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-700">
                   <CardHeader>
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                      <Building className="h-6 w-6 text-primary-outline" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                      <DollarSign className="h-6 w-6 text-white" />
                     </div>
                     <CardTitle className="text-white">
-                      Commercial Claims
+                      Business Interruption
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-200 mb-4">
-                      Business interruption, inventory loss, and commercial
-                      property damage claims for all business types.
+                      Maximize your business interruption claim to cover lost
+                      income and operating expenses.
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-primary-outline" />
                         <span className="text-gray-200">
-                          Business interruption
+                          Lost income calculation
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-primary-outline" />
                         <span className="text-gray-200">
-                          Inventory loss assessment
-                        </span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
-                        <span className="text-gray-200">Equipment damage</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-0 shadow-xl bg-white/10 backdrop-blur-md border border-white/20 hover:shadow-2xl transition-shadow">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                      <Car className="h-6 w-6 text-primary-outline" />
-                    </div>
-                    <CardTitle className="text-white">Auto Claims</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-200 mb-4">
-                      Comprehensive auto insurance claims for damage, theft, and
-                      total loss situations.
-                    </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
-                        <span className="text-gray-200">
-                          Vehicle damage assessment
+                          Operating expense coverage
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-primary-outline" />
                         <span className="text-gray-200">
-                          Total loss evaluation
+                          Extended period of indemnity
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-primary-outline" />
                         <span className="text-gray-200">
-                          Rental car coordination
+                          Contingent business interruption
                         </span>
                       </li>
                     </ul>
@@ -294,21 +287,92 @@ export default function ServicesPage() {
               </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="text-center py-16">
-              <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
-                <h2 className="text-3xl font-bold text-white mb-4">
-                  Ready to Get Started?
+            {/* Specialized Services */}
+            <section className="mb-16">
+              <div className="text-center space-y-4 mb-12 animate-fade-in-up animation-delay-800">
+                <h2 className="text-3xl font-bold text-white">
+                  Specialized Services
                 </h2>
-                <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
-                  Don&apos;t wait to get the settlement you deserve. Contact us
-                  today for a free, no-obligation evaluation of your claim.
+                <p className="text-lg text-gray-200">
+                  Expert handling of complex and specialized claims
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 text-center animate-fade-in-up animation-delay-900">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full mx-auto mb-4 flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                      <Zap className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="font-semibold mb-2 text-white">
+                      Electrical Damage
+                    </h3>
+                    <p className="text-sm text-gray-200">
+                      Power surge and electrical damage claims
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 text-center animate-fade-in-up animation-delay-1000">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full mx-auto mb-4 flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                      <Car className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="font-semibold mb-2 text-white">
+                      Vehicle Damage
+                    </h3>
+                    <p className="text-sm text-gray-200">
+                      Comprehensive and collision claims
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 text-center animate-fade-in-up animation-delay-1100">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full mx-auto mb-4 flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                      <Home className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="font-semibold mb-2 text-white">
+                      Personal Property
+                    </h3>
+                    <p className="text-sm text-gray-200">
+                      Contents and personal property claims
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 text-center animate-fade-in-up animation-delay-1200">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full mx-auto mb-4 flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                      <Shield className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="font-semibold mb-2 text-white">
+                      Liability Claims
+                    </h3>
+                    <p className="text-sm text-gray-200">
+                      Third-party liability and defense
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="bg-white/10 backdrop-blur-md py-16 rounded-lg border border-white/20 animate-fade-in-up animation-delay-1300">
+              <div className="text-center space-y-6">
+                <h2 className="text-3xl font-bold text-white">
+                  Need Help With Your Claim?
+                </h2>
+                <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+                  Don&apos;t let insurance companies take advantage of you.
+                  Contact us today for a free claim evaluation and see how much
+                  more you could recover.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     asChild
-                    size="lg"
                     className="bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                    size="lg"
                   >
                     <Link href="/contact">Get Free Evaluation</Link>
                   </Button>

@@ -4,70 +4,27 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Mail } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export function Header() {
-  const pathname = usePathname();
-  const isHomePage = pathname === "/";
-
-  // Different styling for home page vs other pages
-  const headerClasses = isHomePage
-    ? "sticky top-0 z-50 w-full border-b border-white/20 bg-white/10 backdrop-blur-md"
-    : "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60";
-
-  const topBarClasses = isHomePage
-    ? "hidden md:flex items-center justify-between py-2 text-sm text-gray-200 border-b border-white/20"
-    : "hidden md:flex items-center justify-between py-2 text-sm text-muted-foreground border-b";
-
-  const iconClasses = isHomePage ? "text-primary-outline" : "text-primary";
-  const licenseClasses = isHomePage
-    ? "font-semibold text-white bg-primary/20 px-3 py-1 rounded-md"
-    : "font-semibold text-primary";
-
-  const titleClasses = isHomePage
-    ? "text-xl font-bold text-white"
-    : "text-xl font-bold text-primary";
-  const subtitleClasses = isHomePage
-    ? "text-sm text-gray-200"
-    : "text-sm text-muted-foreground";
-
-  const navLinkClasses = isHomePage
-    ? "text-sm font-medium text-white transition-colors hover:text-primary-outline"
-    : "text-sm font-medium transition-colors hover:text-primary";
-
-  const mobileButtonClasses = isHomePage
-    ? "border-white text-white hover:bg-white hover:text-primary"
-    : "";
-
-  const sheetClasses = isHomePage
-    ? "bg-white/10 backdrop-blur-md border-white/20"
-    : "";
-
-  const mobileNavClasses = isHomePage
-    ? "text-lg font-medium text-white transition-colors hover:text-primary-outline"
-    : "text-lg font-medium transition-colors hover:text-primary";
-
-  const mobileBorderClasses = isHomePage
-    ? "border-t border-white/20"
-    : "border-t";
-
   return (
-    <header className={headerClasses}>
+    <header className="sticky top-0 z-50 w-full border-b border-white/20 bg-white/10 backdrop-blur-md">
       <div className="container mx-auto px-4">
         {/* Top bar with contact info */}
-        <div className={topBarClasses}>
+        <div className="hidden md:flex items-center justify-between py-2 text-sm text-gray-200 border-b border-white/20">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
-              <Phone className={`h-4 w-4 ${iconClasses}`} />
+              <Phone className="h-4 w-4 text-primary-outline" />
               <span>(786) 417-3869</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Mail className={`h-4 w-4 ${iconClasses}`} />
+              <Mail className="h-4 w-4 text-primary-outline" />
               <span>Claims@FernandezAdjusters.com</span>
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <span className={licenseClasses}>License: XXXXXXX</span>
+            <span className="font-semibold text-white bg-primary/20 px-3 py-1 rounded-md">
+              License: XXXXXXX
+            </span>
           </div>
         </div>
 
@@ -81,26 +38,43 @@ export function Header() {
               </span>
             </div>
             <div>
-              <h1 className={titleClasses}>Fernandez Public Adjusters</h1>
-              <p className={subtitleClasses}>Licensed Public Adjusters</p>
+              <h1 className="text-xl font-bold text-white">
+                Fernandez Public Adjusters
+              </h1>
+              <p className="text-sm text-gray-200">Licensed Public Adjusters</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className={navLinkClasses}>
+            <Link
+              href="/"
+              className="text-sm font-medium text-white transition-colors hover:text-primary-outline"
+            >
               Home
             </Link>
-            <Link href="/services" className={navLinkClasses}>
+            <Link
+              href="/services"
+              className="text-sm font-medium text-white transition-colors hover:text-primary-outline"
+            >
               Services
             </Link>
-            <Link href="/about" className={navLinkClasses}>
+            <Link
+              href="/about"
+              className="text-sm font-medium text-white transition-colors hover:text-primary-outline"
+            >
               About
             </Link>
-            <Link href="/contact" className={navLinkClasses}>
+            <Link
+              href="/contact"
+              className="text-sm font-medium text-white transition-colors hover:text-primary-outline"
+            >
               Contact
             </Link>
-            <Link href="/blog" className={navLinkClasses}>
+            <Link
+              href="/blog"
+              className="text-sm font-medium text-white transition-colors hover:text-primary-outline"
+            >
               Blog
             </Link>
           </nav>
@@ -124,29 +98,47 @@ export function Header() {
               <Button
                 variant="outline"
                 size="icon"
-                className={mobileButtonClasses}
+                className="border-white text-white hover:bg-white hover:text-primary"
               >
                 <Menu className="h-4 w-4" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className={sheetClasses}>
+            <SheetContent
+              side="right"
+              className="bg-white/10 backdrop-blur-md border-white/20"
+            >
               <nav className="flex flex-col space-y-4 mt-8">
-                <Link href="/" className={mobileNavClasses}>
+                <Link
+                  href="/"
+                  className="text-lg font-medium text-white transition-colors hover:text-primary-outline"
+                >
                   Home
                 </Link>
-                <Link href="/services" className={mobileNavClasses}>
+                <Link
+                  href="/services"
+                  className="text-lg font-medium text-white transition-colors hover:text-primary-outline"
+                >
                   Services
                 </Link>
-                <Link href="/about" className={mobileNavClasses}>
+                <Link
+                  href="/about"
+                  className="text-lg font-medium text-white transition-colors hover:text-primary-outline"
+                >
                   About
                 </Link>
-                <Link href="/contact" className={mobileNavClasses}>
+                <Link
+                  href="/contact"
+                  className="text-lg font-medium text-white transition-colors hover:text-primary-outline"
+                >
                   Contact
                 </Link>
-                <Link href="/blog" className={mobileNavClasses}>
+                <Link
+                  href="/blog"
+                  className="text-lg font-medium text-white transition-colors hover:text-primary-outline"
+                >
                   Blog
                 </Link>
-                <div className={`pt-4 ${mobileBorderClasses}`}>
+                <div className="pt-4 border-t border-white/20">
                   <Button
                     asChild
                     className="w-full bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
