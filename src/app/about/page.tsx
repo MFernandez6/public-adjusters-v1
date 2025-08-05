@@ -85,25 +85,25 @@ export default function AboutPage() {
                   {/* Key Qualifications */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex items-center space-x-3">
-                      <GraduationCap className="h-5 w-5 text-primary-outline" />
+                      <GraduationCap className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                       <span className="text-sm font-medium text-white">
                         Master of Science in Law & Policy
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Award className="h-5 w-5 text-primary-outline" />
+                      <Award className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                       <span className="text-sm font-medium text-white">
                         Magna Cum Laude Graduate
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Building className="h-5 w-5 text-primary-outline" />
+                      <Building className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                       <span className="text-sm font-medium text-white">
                         Property Damage Specialist
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Scale className="h-5 w-5 text-primary-outline" />
+                      <Scale className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                       <span className="text-sm font-medium text-white">
                         Legal & Insurance Experience
                       </span>
@@ -218,7 +218,7 @@ export default function AboutPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-100">
                   <CardContent className="p-6 text-center">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full mx-auto mb-4 flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <Shield className="h-8 w-8 text-white" />
+                      <Shield className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">
                       Claims Specialists
@@ -233,7 +233,7 @@ export default function AboutPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-200">
                   <CardContent className="p-6 text-center">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full mx-auto mb-4 flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <Award className="h-8 w-8 text-white" />
+                      <Award className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">
                       Legal Experts
@@ -248,7 +248,7 @@ export default function AboutPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-300">
                   <CardContent className="p-6 text-center">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full mx-auto mb-4 flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <Users className="h-8 w-8 text-white" />
+                      <Users className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">
                       Client Advocates
@@ -276,7 +276,7 @@ export default function AboutPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="flex items-start space-x-4 animate-fade-in-up animation-delay-100">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <Target className="h-6 w-6 text-white" />
+                    <Target className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
@@ -291,7 +291,7 @@ export default function AboutPage() {
 
                 <div className="flex items-start space-x-4 animate-fade-in-up animation-delay-200">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <Shield className="h-6 w-6 text-white" />
+                    <Shield className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
@@ -306,7 +306,7 @@ export default function AboutPage() {
 
                 <div className="flex items-start space-x-4 animate-fade-in-up animation-delay-300">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <Users className="h-6 w-6 text-white" />
+                    <Users className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
@@ -321,7 +321,7 @@ export default function AboutPage() {
 
                 <div className="flex items-start space-x-4 animate-fade-in-up animation-delay-400">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <Award className="h-6 w-6 text-white" />
+                    <Award className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
@@ -336,7 +336,7 @@ export default function AboutPage() {
 
                 <div className="flex items-start space-x-4 animate-fade-in-up animation-delay-500">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <CheckCircle className="h-6 w-6 text-white" />
+                    <CheckCircle className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
@@ -350,7 +350,7 @@ export default function AboutPage() {
 
                 <div className="flex items-start space-x-4 animate-fade-in-up animation-delay-600">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <Star className="h-6 w-6 text-white" />
+                    <Star className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
@@ -379,7 +379,7 @@ export default function AboutPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     asChild
-                    className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     size="lg"
                   >
                     <Link href="/contact">Get Free Evaluation</Link>
@@ -388,7 +388,7 @@ export default function AboutPage() {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="border-white/30 text-white hover:bg-white/20 hover:border-white/50 transition-all duration-300 transform hover:scale-105"
+                    className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <Link href="tel:786-417-3869">
                       <Phone className="h-4 w-4 mr-2" />

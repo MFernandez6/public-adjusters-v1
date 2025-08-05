@@ -1,10 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -137,11 +137,11 @@ export default function BlogPage() {
                     </p>
                     <div className="flex items-center space-x-4 text-sm text-gray-200">
                       <div className="flex items-center space-x-2">
-                        <Calendar className="h-4 w-4" />
+                        <Calendar className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span>January 15, 2024</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Clock className="h-4 w-4" />
+                        <Clock className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span>5 min read</span>
                       </div>
                     </div>
@@ -151,7 +151,7 @@ export default function BlogPage() {
                     >
                       <Link href="/blog/hurricane-guide">
                         Read Full Article
-                        <ArrowRight className="h-4 w-4 ml-2" />
+                        <ArrowRight className="h-4 w-4 ml-2 text-orange-400 drop-shadow-lg" />
                       </Link>
                     </Button>
                   </div>
@@ -183,7 +183,7 @@ export default function BlogPage() {
                           {post.category}
                         </Badge>
                         <div className="flex items-center space-x-2 text-sm text-gray-200">
-                          <Clock className="h-3 w-3" />
+                          <Clock className="h-3 w-3 text-orange-400 drop-shadow-lg" />
                           <span>{post.readTime}</span>
                         </div>
                       </div>
@@ -195,7 +195,7 @@ export default function BlogPage() {
                       <p className="text-gray-200 mb-4">{post.excerpt}</p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2 text-sm text-gray-200">
-                          <Calendar className="h-3 w-3" />
+                          <Calendar className="h-3 w-3 text-orange-400 drop-shadow-lg" />
                           <span>
                             {new Date(post.date).toLocaleDateString()}
                           </span>
@@ -204,11 +204,11 @@ export default function BlogPage() {
                           asChild
                           variant="ghost"
                           size="sm"
-                          className="text-white hover:bg-white/20"
+                          className="text-white hover:bg-gray-800"
                         >
                           <Link href={`/blog/${post.id}`}>
                             Read More
-                            <ArrowRight className="h-3 w-3 ml-1" />
+                            <ArrowRight className="h-3 w-3 ml-1 text-orange-400 drop-shadow-lg" />
                           </Link>
                         </Button>
                       </div>
@@ -265,8 +265,9 @@ export default function BlogPage() {
                   <Button
                     key={category}
                     asChild
-                    variant="outline"
-                    className="h-12 border-white/20 text-white hover:bg-white/20 animate-fade-in-up"
+                    size="lg"
+                    variant="secondary"
+                    className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up"
                     style={{ animationDelay: `${(index + 8) * 100}ms` }}
                   >
                     <Link

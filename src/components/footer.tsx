@@ -20,8 +20,13 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary-foreground rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">F</span>
+              <div className="relative w-10 h-10 bg-gradient-to-br from-primary-foreground via-primary-foreground/90 to-primary-foreground/70 rounded-xl flex items-center justify-center shadow-lg group">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>
+                <span className="relative text-primary font-extrabold text-xs tracking-wider drop-shadow-sm">
+                  FPA
+                </span>
+                <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full shadow-sm animate-pulse"></div>
               </div>
               <h3 className="text-lg font-bold">Fernandez Public Adjusters</h3>
             </div>
@@ -155,7 +160,11 @@ export function Footer() {
             Reserved
           </div>
           <div className="flex items-center space-x-4">
-            <Button asChild size="sm" variant="outline">
+            <Button
+              asChild
+              size="sm"
+              className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-gray-900 font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-6 py-2"
+            >
               <Link href="tel:786-417-3869">
                 <Phone className="h-4 w-4 mr-2" />
                 Get A Free Consultation

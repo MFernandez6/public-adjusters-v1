@@ -78,7 +78,7 @@ export default function Home() {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                    className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <Link href="/contact">Start Your Claim</Link>
                   </Button>
@@ -86,7 +86,7 @@ export default function Home() {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
+                    className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <Link href="tel:786-417-3869">
                       <Phone className="h-4 w-4 mr-2" />
@@ -98,25 +98,25 @@ export default function Home() {
               <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 animate-fade-in-up animation-delay-200">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-400" />
+                    <CheckCircle className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
                       Immediate Response
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-400" />
+                    <CheckCircle className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
                       Proper Documentation
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-400" />
+                    <CheckCircle className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
                       Policy Review
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-400" />
+                    <CheckCircle className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
                       Expert Guidance
                     </span>
@@ -134,25 +134,25 @@ export default function Home() {
               <div className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 animate-fade-in-left">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <Shield className="h-6 w-6 text-primary-outline" />
+                    <Shield className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
                       Insurance Company Advocacy
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Shield className="h-6 w-6 text-primary-outline" />
+                    <Shield className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
                       Red Tape Navigation
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Shield className="h-6 w-6 text-primary-outline" />
+                    <Shield className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
                       Unreasonable Demands Handling
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Shield className="h-6 w-6 text-primary-outline" />
+                    <Shield className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
                       Personal Representation
                     </span>
@@ -173,7 +173,7 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <Link href="/contact">Review Your Claim</Link>
                 </Button>
@@ -199,7 +199,7 @@ export default function Home() {
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-100">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <FileText className="h-6 w-6 text-white" />
+                    <FileText className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">Policy Review</CardTitle>
                 </CardHeader>
@@ -214,7 +214,7 @@ export default function Home() {
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-200">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center mb-4 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <DollarSign className="h-6 w-6 text-white" />
+                    <DollarSign className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">
                     Fair Cost Estimation
@@ -231,7 +231,7 @@ export default function Home() {
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-300">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <Users className="h-6 w-6 text-white" />
+                    <Users className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">Expert Advocacy</CardTitle>
                 </CardHeader>
@@ -246,7 +246,7 @@ export default function Home() {
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-400">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center mb-4 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <Award className="h-6 w-6 text-white" />
+                    <Award className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">Fair Settlement</CardTitle>
                 </CardHeader>
@@ -278,25 +278,25 @@ export default function Home() {
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3">
-                    <Building className="h-5 w-5 text-primary-outline" />
+                    <Building className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
                       Large Loss Claims
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <DollarSign className="h-5 w-5 text-primary-outline" />
+                    <DollarSign className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
                       Business Interruption
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <FileText className="h-5 w-5 text-primary-outline" />
+                    <FileText className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
                       Expert Coordination
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Award className="h-5 w-5 text-primary-outline" />
+                    <Award className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
                       Proven Results
                     </span>
@@ -305,7 +305,7 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <Link href="/services">Learn More</Link>
                 </Button>
@@ -350,25 +350,25 @@ export default function Home() {
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3">
-                    <Building className="h-5 w-5 text-primary-outline" />
+                    <Building className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
                       Property Damage
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Wind className="h-5 w-5 text-primary-outline" />
+                    <Wind className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
                       Storm Damage
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Shield className="h-5 w-5 text-primary-outline" />
+                    <Shield className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
                       Fair Treatment
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Clock className="h-5 w-5 text-primary" />
+                    <Clock className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
                       Quick Payment
                     </span>
@@ -377,7 +377,7 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <Link href="/services">View Success Stories</Link>
                 </Button>
@@ -403,7 +403,7 @@ export default function Home() {
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-100">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4">
-                    <Award className="h-6 w-6 text-white" />
+                    <Award className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">
                     Proven Experience
@@ -422,7 +422,7 @@ export default function Home() {
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-200">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center mb-4">
-                    <Shield className="h-6 w-6 text-white" />
+                    <Shield className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">
                     Policyholder Champions
@@ -440,7 +440,7 @@ export default function Home() {
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-300">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4">
-                    <DollarSign className="h-6 w-6 text-white" />
+                    <DollarSign className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">
                     Maximum Settlements
@@ -458,7 +458,7 @@ export default function Home() {
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-400">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-white" />
+                    <Users className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">Personal Service</CardTitle>
                 </CardHeader>
@@ -474,7 +474,7 @@ export default function Home() {
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-500">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4">
-                    <CheckCircle className="h-6 w-6 text-white" />
+                    <CheckCircle className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">No Upfront Fees</CardTitle>
                 </CardHeader>
@@ -489,7 +489,7 @@ export default function Home() {
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-600">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center mb-4">
-                    <Star className="h-6 w-6 text-white" />
+                    <Star className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">Proven Results</CardTitle>
                 </CardHeader>
@@ -593,7 +593,7 @@ export default function Home() {
                 asChild
                 size="lg"
                 variant="secondary"
-                className="text-lg px-8 py-6 bg-white text-primary hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <Link href="tel:786-417-3869">
                   <Phone className="h-5 w-5 mr-2" />
@@ -604,7 +604,7 @@ export default function Home() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
+                className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <Link href="/contact">Get Free Evaluation</Link>
               </Button>

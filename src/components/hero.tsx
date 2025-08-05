@@ -29,25 +29,25 @@ export function Hero() {
             {/* Features */}
             <div className="grid grid-cols-2 gap-4">
               <div className="flex items-center space-x-3">
-                <Shield className="h-5 w-5 text-primary-outline" />
+                <Shield className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                 <span className="text-sm font-medium text-white">
                   Licensed & Insured
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <DollarSign className="h-5 w-5 text-primary-outline" />
+                <DollarSign className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                 <span className="text-sm font-medium text-white">
                   No Upfront Fees
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <Clock className="h-5 w-5 text-primary-outline" />
+                <Clock className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                 <span className="text-sm font-medium text-white">
                   24/7 Response
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <Shield className="h-5 w-5 text-primary-outline" />
+                <Shield className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                 <span className="text-sm font-medium text-white">
                   Nationwide Service
                 </span>
@@ -70,7 +70,7 @@ export function Hero() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
+                className="text-lg px-8 py-6 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <Link href="/contact">Get Free Evaluation</Link>
               </Button>
@@ -157,7 +157,7 @@ export function Hero() {
 
                     <Button
                       type="submit"
-                      className="w-full bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                      className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                       size="lg"
                     >
                       Get Free Evaluation

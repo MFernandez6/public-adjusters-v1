@@ -83,7 +83,7 @@ export default function ServicesPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-200">
                   <CardHeader>
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <Flame className="h-6 w-6 text-white" />
+                      <Flame className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     </div>
                     <CardTitle className="text-white">Fire Damage</CardTitle>
                   </CardHeader>
@@ -94,19 +94,19 @@ export default function ServicesPage() {
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Structural damage assessment
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Smoke and soot damage
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Personal property inventory
                         </span>
@@ -118,7 +118,7 @@ export default function ServicesPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-300">
                   <CardHeader>
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <Droplets className="h-6 w-6 text-white" />
+                      <Droplets className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     </div>
                     <CardTitle className="text-white">Water Damage</CardTitle>
                   </CardHeader>
@@ -129,19 +129,19 @@ export default function ServicesPage() {
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Flood damage assessment
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Mold remediation costs
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Structural drying documentation
                         </span>
@@ -153,7 +153,7 @@ export default function ServicesPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-400">
                   <CardHeader>
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <Wind className="h-6 w-6 text-white" />
+                      <Wind className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     </div>
                     <CardTitle className="text-white">Storm Damage</CardTitle>
                   </CardHeader>
@@ -164,19 +164,19 @@ export default function ServicesPage() {
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Roof damage assessment
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Window and siding damage
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Debris removal costs
                         </span>
@@ -202,7 +202,7 @@ export default function ServicesPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-600">
                   <CardHeader>
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <Building className="h-6 w-6 text-white" />
+                      <Building className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     </div>
                     <CardTitle className="text-white">
                       Commercial Property
@@ -215,25 +215,25 @@ export default function ServicesPage() {
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Building damage assessment
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Equipment and inventory loss
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Business interruption claims
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Extra expense coverage
                         </span>
@@ -245,7 +245,7 @@ export default function ServicesPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-up animation-delay-700">
                   <CardHeader>
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <DollarSign className="h-6 w-6 text-white" />
+                      <DollarSign className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     </div>
                     <CardTitle className="text-white">
                       Business Interruption
@@ -258,25 +258,25 @@ export default function ServicesPage() {
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Lost income calculation
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Operating expense coverage
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Extended period of indemnity
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary-outline" />
+                        <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
                           Contingent business interruption
                         </span>
@@ -302,7 +302,7 @@ export default function ServicesPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 text-center animate-fade-in-up animation-delay-900">
                   <CardContent className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full mx-auto mb-4 flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <Zap className="h-8 w-8 text-white" />
+                      <Zap className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="font-semibold mb-2 text-white">
                       Electrical Damage
@@ -316,7 +316,7 @@ export default function ServicesPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 text-center animate-fade-in-up animation-delay-1000">
                   <CardContent className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full mx-auto mb-4 flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <Car className="h-8 w-8 text-white" />
+                      <Car className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="font-semibold mb-2 text-white">
                       Vehicle Damage
@@ -330,7 +330,7 @@ export default function ServicesPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 text-center animate-fade-in-up animation-delay-1100">
                   <CardContent className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full mx-auto mb-4 flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <Home className="h-8 w-8 text-white" />
+                      <Home className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="font-semibold mb-2 text-white">
                       Personal Property
@@ -344,7 +344,7 @@ export default function ServicesPage() {
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-md border border-white/20 text-center animate-fade-in-up animation-delay-1200">
                   <CardContent className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full mx-auto mb-4 flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                      <Shield className="h-8 w-8 text-white" />
+                      <Shield className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="font-semibold mb-2 text-white">
                       Liability Claims
@@ -371,7 +371,7 @@ export default function ServicesPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     asChild
-                    className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     size="lg"
                   >
                     <Link href="/contact">Get Free Evaluation</Link>
@@ -380,7 +380,7 @@ export default function ServicesPage() {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="border-white/30 text-white hover:bg-white/20 hover:border-white/50 transition-all duration-300 transform hover:scale-105"
+                    className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <Link href="tel:786-417-3869">
                       <Phone className="h-4 w-4 mr-2" />

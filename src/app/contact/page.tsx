@@ -198,7 +198,7 @@ export default function ContactPage() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-start space-x-3">
-                      <MapPin className="h-5 w-5 text-primary-outline mt-0.5 flex-shrink-0" />
+                      <MapPin className="h-5 w-5 text-orange-400 drop-shadow-lg mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold text-white">
                           Fernandez Public Adjusters, LLC
@@ -210,7 +210,7 @@ export default function ContactPage() {
                       </div>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Phone className="h-5 w-5 text-primary-outline flex-shrink-0" />
+                      <Phone className="h-5 w-5 text-orange-400 drop-shadow-lg flex-shrink-0" />
                       <a
                         href="tel:786-417-3869"
                         className="hover:underline text-white"
@@ -219,7 +219,7 @@ export default function ContactPage() {
                       </a>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Mail className="h-5 w-5 text-primary-outline flex-shrink-0" />
+                      <Mail className="h-5 w-5 text-orange-400 drop-shadow-lg flex-shrink-0" />
                       <a
                         href="mailto:Claims@FernandezAdjusters.com"
                         className="hover:underline text-white"
@@ -244,7 +244,7 @@ export default function ContactPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center space-x-3 mb-4">
-                      <Clock className="h-5 w-5 text-primary-outline flex-shrink-0" />
+                      <Clock className="h-5 w-5 text-orange-400 drop-shadow-lg flex-shrink-0" />
                       <span className="font-semibold text-white">
                         Available 24/7 for Emergencies
                       </span>
@@ -279,7 +279,7 @@ export default function ContactPage() {
                     <Button
                       asChild
                       variant="secondary"
-                      className="w-full bg-gradient-to-r from-white to-gray-50 text-primary hover:from-gray-50 hover:to-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                      className="w-full bg-gray-800/80 backdrop-blur-md border border-gray-600 text-white hover:bg-gray-700/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                       size="lg"
                     >
                       <a href="tel:786-417-3869">
