@@ -3,11 +3,28 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone, Mail } from "lucide-react";
+import { Menu, Phone, Mail, Globe, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+
+  const languages = [
+    { code: "en", name: "English", flag: "🇺🇸" },
+    { code: "es", name: "Español", flag: "🇪🇸" },
+  ];
+
+  const handleLanguageChange = (langCode: string) => {
+    setLanguage(langCode as "en" | "es");
+    setIsLanguageOpen(false);
+  };
+
+  const getCurrentLanguageName = () => {
+    return languages.find((lang) => lang.code === language)?.name || "English";
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-700/50 bg-gray-900/80 backdrop-blur-md">
@@ -50,7 +67,9 @@ export function Header() {
               <h1 className="text-xl font-bold text-white">
                 Fernandez Public Adjusters
               </h1>
-              <p className="text-sm text-gray-300">Licensed Public Adjusters</p>
+              <p className="text-sm text-gray-300">
+                {t("nav.licensedPublicAdjusters")}
+              </p>
             </div>
           </Link>
 
@@ -60,43 +79,71 @@ export function Header() {
               href="/"
               className="text-sm font-medium text-white transition-colors hover:text-primary-outline"
             >
-              Home
+              {t("nav.home")}
             </Link>
             <Link
               href="/services"
               className="text-sm font-medium text-white transition-colors hover:text-primary-outline"
             >
-              Services
+              {t("nav.services")}
             </Link>
             <Link
               href="/about"
               className="text-sm font-medium text-white transition-colors hover:text-primary-outline"
             >
-              About
+              {t("nav.about")}
             </Link>
             <Link
               href="/contact"
               className="text-sm font-medium text-white transition-colors hover:text-primary-outline"
             >
-              Contact
+              {t("nav.contact")}
             </Link>
             <Link
               href="/blog"
               className="text-sm font-medium text-white transition-colors hover:text-primary-outline"
             >
-              Blog
+              {t("nav.blog")}
             </Link>
           </nav>
 
-          {/* CTA Button */}
+          {/* Desktop Language Switcher */}
           <div className="hidden md:flex items-center space-x-4">
+            <div className="relative">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                className="bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+              >
+                <Globe className="h-4 w-4 mr-2" />
+                {getCurrentLanguageName()}
+                <ChevronDown className="h-4 w-4 ml-2 transition-transform duration-200" />
+              </Button>
+
+              {isLanguageOpen && (
+                <div className="absolute top-full right-0 mt-2 w-48 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-xl z-50">
+                  {languages.map((language) => (
+                    <button
+                      key={language.code}
+                      onClick={() => handleLanguageChange(language.code)}
+                      className="w-full px-4 py-3 text-left text-white hover:bg-white/20 transition-colors duration-200 flex items-center space-x-3 first:rounded-t-lg last:rounded-b-lg"
+                    >
+                      <span className="text-lg">{language.flag}</span>
+                      <span className="font-medium">{language.name}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Button
               asChild
               className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <Link href="tel:786-417-3869">
                 <Phone className="h-4 w-4 mr-2" />
-                Free Consultation
+                {t("nav.freeConsultation")}
               </Link>
             </Button>
           </div>
@@ -122,44 +169,67 @@ export function Header() {
                   className="text-lg font-medium text-white transition-colors hover:text-primary-outline"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Home
+                  {t("nav.home")}
                 </Link>
                 <Link
                   href="/services"
                   className="text-lg font-medium text-white transition-colors hover:text-primary-outline"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Services
+                  {t("nav.services")}
                 </Link>
                 <Link
                   href="/about"
                   className="text-lg font-medium text-white transition-colors hover:text-primary-outline"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  About
+                  {t("nav.about")}
                 </Link>
                 <Link
                   href="/contact"
                   className="text-lg font-medium text-white transition-colors hover:text-primary-outline"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Contact
+                  {t("nav.contact")}
                 </Link>
                 <Link
                   href="/blog"
                   className="text-lg font-medium text-white transition-colors hover:text-primary-outline"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Blog
+                  {t("nav.blog")}
                 </Link>
+
+                {/* Mobile Language Switcher */}
                 <div className="pt-4 border-t border-gray-700/50">
+                  <div className="mb-4">
+                    <h3 className="text-sm font-medium text-gray-300 mb-2">
+                      {t("nav.languageIdioma")}
+                    </h3>
+                    <div className="space-y-2">
+                      {languages.map((language) => (
+                        <button
+                          key={language.code}
+                          onClick={() => {
+                            handleLanguageChange(language.code);
+                            setIsMobileMenuOpen(false);
+                          }}
+                          className="w-full px-4 py-3 text-left text-white hover:bg-white/20 transition-colors duration-200 rounded-lg flex items-center space-x-3"
+                        >
+                          <span className="text-lg">{language.flag}</span>
+                          <span className="font-medium">{language.name}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
                   <Button
                     asChild
                     className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <Link href="tel:786-417-3869">
                       <Phone className="h-4 w-4 mr-2" />
-                      Free Consultation
+                      {t("nav.freeConsultation")}
                     </Link>
                   </Button>
                 </div>
@@ -168,6 +238,14 @@ export function Header() {
           </Sheet>
         </div>
       </div>
+
+      {/* Click outside to close language dropdown */}
+      {isLanguageOpen && (
+        <div
+          className="fixed inset-0 z-40"
+          onClick={() => setIsLanguageOpen(false)}
+        />
+      )}
     </header>
   );
 }

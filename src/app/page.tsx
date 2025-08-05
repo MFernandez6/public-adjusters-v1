@@ -1,6 +1,6 @@
 "use client";
 
-import { Hero } from "@/components/hero";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,19 +10,21 @@ import {
   DollarSign,
   Clock,
   Users,
-  CheckCircle,
   Star,
   Phone,
   Building,
   FileText,
   Award,
   Wind,
+  CheckCircle,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -56,7 +58,37 @@ export default function Home() {
       {/* Content with Parallax Effect */}
       <div className="relative z-10 content-above-bg">
         {/* Hero Section */}
-        <Hero />
+        <section className="pt-32 pb-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up">
+              {t("hero.title")}
+            </h1>
+            <p className="text-xl text-gray-200 leading-relaxed mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
+              {t("hero.subtitle")}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-400">
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                <Link href="/contact">{t("hero.getFreeEvaluation")}</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                <Link href="tel:786-417-3869">
+                  <Phone className="h-5 w-5 mr-2" />
+                  {t("hero.callNow")}
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
 
         {/* Call to Action - New Claims */}
         <section className="py-20">
@@ -64,15 +96,10 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-fade-in-up">
                 <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                  Do You Have a New Claim?
+                  {t("services.newClaimTitle")}
                 </h2>
                 <p className="text-lg text-gray-200 leading-relaxed">
-                  The best time to get a public adjuster involved in your claim
-                  is at the very beginning. Policyholders unfamiliar with the
-                  claims process and policy language can make key mistakes. How
-                  you report and document your claim can have a significant
-                  impact on how quickly you get paid and your final settlement
-                  amount.
+                  {t("services.newClaimDesc")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
@@ -80,7 +107,7 @@ export default function Home() {
                     size="lg"
                     className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
-                    <Link href="/contact">Start Your Claim</Link>
+                    <Link href="/contact">{t("services.startClaim")}</Link>
                   </Button>
                   <Button
                     asChild
@@ -90,7 +117,7 @@ export default function Home() {
                   >
                     <Link href="tel:786-417-3869">
                       <Phone className="h-4 w-4 mr-2" />
-                      Call (786) 417-3869
+                      {t("hero.callNow")}
                     </Link>
                   </Button>
                 </div>
@@ -100,25 +127,25 @@ export default function Home() {
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
-                      Immediate Response
+                      {t("services.immediateResponse")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
-                      Proper Documentation
+                      {t("services.properDocumentation")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
-                      Policy Review
+                      {t("services.policyReview")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
-                      Expert Guidance
+                      {t("services.expertGuidance")}
                     </span>
                   </div>
                 </div>
@@ -136,46 +163,42 @@ export default function Home() {
                   <div className="flex items-center space-x-3">
                     <Shield className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
-                      Insurance Company Advocacy
+                      {t("services.insuranceAdvocacy")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Shield className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
-                      Red Tape Navigation
+                      {t("services.redTapeNavigation")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Shield className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
-                      Unreasonable Demands Handling
+                      {t("services.unreasonableDemands")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Shield className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     <span className="font-semibold text-white">
-                      Personal Representation
+                      {t("services.personalRepresentation")}
                     </span>
                   </div>
                 </div>
               </div>
               <div className="space-y-6 animate-fade-in-right">
                 <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                  Delayed & Denied Claims
+                  {t("services.delayedDeniedClaims")}
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Is your insurance company dragging their feet? Don&apos;t let
-                  the insurance companies bully or throw a lot of red tape at
-                  you. The unreasonable demands to prove your claim can be
-                  overwhelming. As your personal representative, a public
-                  adjuster will help you navigate the insurance claims process.
+                  {t("services.delayedDeniedClaimsDesc")}
                 </p>
                 <Button
                   asChild
                   size="lg"
                   className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  <Link href="/contact">Review Your Claim</Link>
+                  <Link href="/contact">{t("services.reviewClaim")}</Link>
                 </Button>
               </div>
             </div>
@@ -187,11 +210,10 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center space-y-4 mb-12 animate-fade-in-up">
               <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                Benefits of Hiring a Public Adjuster
+                {t("services.benefitsTitle")}
               </h2>
               <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-                Don&apos;t let the insurer tell you what they will pay. We
-                ensure you get the settlement you deserve.
+                {t("services.benefitsSubtitle")}
               </p>
             </div>
 
@@ -201,12 +223,13 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                     <FileText className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
-                  <CardTitle className="text-white">Policy Review</CardTitle>
+                  <CardTitle className="text-white">
+                    {t("services.policyReview")}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-200">
-                    We review your policy to ensure all coverages are claimed
-                    and maximize your recovery.
+                    {t("services.policyReviewDesc")}
                   </p>
                 </CardContent>
               </Card>
@@ -217,13 +240,12 @@ export default function Home() {
                     <DollarSign className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">
-                    Fair Cost Estimation
+                    {t("services.fairCostEstimation")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-200">
-                    We estimate the fair repair cost of your damages, not what
-                    the insurance company wants to pay.
+                    {t("services.fairCostEstimationDesc")}
                   </p>
                 </CardContent>
               </Card>
@@ -233,12 +255,13 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                     <Users className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
-                  <CardTitle className="text-white">Expert Advocacy</CardTitle>
+                  <CardTitle className="text-white">
+                    {t("services.expertAdvocacy")}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-200">
-                    We meet with the insurance adjuster to advocate for you and
-                    fight for your rights.
+                    {t("services.expertAdvocacyDesc")}
                   </p>
                 </CardContent>
               </Card>
@@ -248,12 +271,13 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center mb-4 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                     <Award className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
-                  <CardTitle className="text-white">Fair Settlement</CardTitle>
+                  <CardTitle className="text-white">
+                    {t("services.fairSettlement")}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-200">
-                    We negotiate and settle your claim so you are treated fairly
-                    and get maximum compensation.
+                    {t("services.fairSettlementDesc")}
                   </p>
                 </CardContent>
               </Card>
@@ -267,38 +291,34 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-fade-in-left">
                 <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                  Commercial Claims
+                  {t("services.commercialClaims")}
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Business claims can quickly become complicated matters with
-                  layers of insurance coverage, inventory and property
-                  valuation, repair cost estimates, coordination of experts and
-                  communication with multiple insurance carrier staff. Let us
-                  handle the claim while you get yourself back in business.
+                  {t("services.commercialClaimsDesc")}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3">
                     <Building className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
-                      Large Loss Claims
+                      {t("services.largeLossClaims")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <DollarSign className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
-                      Business Interruption
+                      {t("services.businessInterruption")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <FileText className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
-                      Expert Coordination
+                      {t("services.expertCoordination")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Award className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
-                      Proven Results
+                      {t("services.provenResults")}
                     </span>
                   </div>
                 </div>
@@ -307,16 +327,15 @@ export default function Home() {
                   size="lg"
                   className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  <Link href="/services">Learn More</Link>
+                  <Link href="/services">{t("common.learnMore")}</Link>
                 </Button>
               </div>
               <div className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 animate-fade-in-right">
                 <h3 className="text-xl font-bold text-white mb-4">
-                  Our Record Speaks for Itself
+                  {t("services.recordSpeaks")}
                 </h3>
                 <p className="text-gray-300">
-                  Review our commercial claim success stories to understand why
-                  we&apos;re considered the large loss claims expert.
+                  {t("services.recordSpeaksDesc")}
                 </p>
               </div>
             </div>
@@ -329,48 +348,42 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 animate-fade-in-left">
                 <h3 className="text-xl font-bold text-white mb-4">
-                  What&apos;s Your Claim Really Worth?
+                  {t("services.whatsYourClaimWorth")}
                 </h3>
                 <p className="text-gray-200">
-                  If you&apos;ve sustained property damage and plan to file an
-                  insurance claim, do you know what your claim is really worth?
-                  Will your insurer offer you a fair claim settlement?
+                  {t("services.whatsYourClaimWorthDesc")}
                 </p>
               </div>
               <div className="space-y-6 animate-fade-in-right">
                 <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                  Residential Claims
+                  {t("services.residentialClaims")}
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  If being treated fairly and getting paid quickly are important
-                  to you, consider hiring a public insurance adjuster to
-                  represent you and manage your claim. Read our residential
-                  claim success stories to understand how we&apos;ve helped with
-                  property damage claims just like yours.
+                  {t("services.residentialClaimsDesc")}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3">
                     <Building className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
-                      Property Damage
+                      {t("services.propertyDamage")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Wind className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
-                      Storm Damage
+                      {t("services.stormDamage")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Shield className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
-                      Fair Treatment
+                      {t("services.fairTreatment")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Clock className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                     <span className="text-sm font-medium text-white">
-                      Quick Payment
+                      {t("services.quickPayment")}
                     </span>
                   </div>
                 </div>
@@ -379,7 +392,9 @@ export default function Home() {
                   size="lg"
                   className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  <Link href="/services">View Success Stories</Link>
+                  <Link href="/services">
+                    {t("services.viewSuccessStories")}
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -391,11 +406,10 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center space-y-4 mb-12 animate-fade-in-up">
               <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                Why Choose Fernandez Public Adjusters?
+                {t("services.whyChooseFernandez")}
               </h2>
               <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-                We&apos;re not just another public adjusting firm. Here&apos;s
-                what sets us apart:
+                {t("services.whyChooseFernandezDesc")}
               </p>
             </div>
 
@@ -406,15 +420,12 @@ export default function Home() {
                     <Award className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">
-                    Proven Experience
+                    {t("services.provenExperience")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-200">
-                    Our adjuster&apos;s level of experience is unmatched. We
-                    utilize claims management software and the latest technology
-                    to manage, track and build a case that gets you a fair
-                    settlement.
+                    {t("services.provenExperienceDesc")}
                   </p>
                 </CardContent>
               </Card>
@@ -425,14 +436,12 @@ export default function Home() {
                     <Shield className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">
-                    Policyholder Champions
+                    {t("services.policyholderChampions")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-200">
-                    We work exclusively for you - not the insurance company. Our
-                    commitment is to be your champion throughout the entire
-                    claims process.
+                    {t("services.policyholderChampionsDesc")}
                   </p>
                 </CardContent>
               </Card>
@@ -443,14 +452,12 @@ export default function Home() {
                     <DollarSign className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
                   <CardTitle className="text-white">
-                    Maximum Settlements
+                    {t("services.maximumSettlements")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-200">
-                    Our clients typically receive 3-5 times more than initial
-                    insurance offers. We know how to document and negotiate for
-                    maximum recovery.
+                    {t("services.maximumSettlementsDesc")}
                   </p>
                 </CardContent>
               </Card>
@@ -460,13 +467,13 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center mb-4">
                     <Users className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
-                  <CardTitle className="text-white">Personal Service</CardTitle>
+                  <CardTitle className="text-white">
+                    {t("services.personalService")}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-200">
-                    You&apos;ll work directly with experienced adjusters, not
-                    case managers. We provide personalized attention to every
-                    client.
+                    {t("services.personalServiceDesc")}
                   </p>
                 </CardContent>
               </Card>
@@ -476,12 +483,13 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4">
                     <CheckCircle className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
-                  <CardTitle className="text-white">No Upfront Fees</CardTitle>
+                  <CardTitle className="text-white">
+                    {t("services.noUpfrontFees")}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-200">
-                    We work on a contingency basis - we only get paid when you
-                    get paid. No hidden costs or upfront fees.
+                    {t("services.noUpfrontFeesDesc")}
                   </p>
                 </CardContent>
               </Card>
@@ -491,12 +499,13 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center mb-4">
                     <Star className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                   </div>
-                  <CardTitle className="text-white">Proven Results</CardTitle>
+                  <CardTitle className="text-white">
+                    {t("services.provenResults")}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-200">
-                    Over $2.5 million recovered for our clients. Check our
-                    testimonials and see the difference we make.
+                    {t("services.provenResultsDesc")}
                   </p>
                 </CardContent>
               </Card>
@@ -509,10 +518,10 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center space-y-4 mb-12 animate-fade-in-up">
               <h2 className="text-3xl font-bold text-white">
-                What Our Clients Say
+                {t("testimonials.title")}
               </h2>
               <p className="text-xl text-gray-200">
-                Real testimonials from satisfied clients
+                {t("testimonials.subtitle")}
               </p>
             </div>
 
@@ -527,14 +536,10 @@ export default function Home() {
                     <Star className="h-4 w-4 text-yellow-500 fill-current" />
                   </div>
                   <p className="text-gray-200 mb-4 italic">
-                    &quot;I am writing to let you know I appreciate the hard
-                    work that has gone into my case. It&apos;s been a long
-                    journey. Miguel and his team have been compassionate and
-                    understanding during this emotional and stressful time. I
-                    thank you for that.&quot;
+                    {t("testimonials.testimonial1")}
                   </p>
                   <p className="font-semibold text-white">
-                    - Florida Homeowner
+                    {t("testimonials.client1")}
                   </p>
                 </CardContent>
               </Card>
@@ -549,11 +554,11 @@ export default function Home() {
                     <Star className="h-4 w-4 text-yellow-500 fill-current" />
                   </div>
                   <p className="text-gray-200 mb-4 italic">
-                    &quot;We felt very confident with Miguel assisting us with
-                    our claim. We are thankful we had them advocating for
-                    us.&quot;
+                    {t("testimonials.testimonial2")}
                   </p>
-                  <p className="font-semibold text-white">- Liza Pettingill</p>
+                  <p className="font-semibold text-white">
+                    {t("testimonials.client2")}
+                  </p>
                 </CardContent>
               </Card>
 
@@ -567,11 +572,11 @@ export default function Home() {
                     <Star className="h-4 w-4 text-yellow-500 fill-current" />
                   </div>
                   <p className="text-gray-200 mb-4 italic">
-                    &quot;Superb service and attention to detail, follow through
-                    and support made our experience with our claim positive and
-                    satisfying.&quot;
+                    {t("testimonials.testimonial3")}
                   </p>
-                  <p className="font-semibold text-white">- Taylor Vanston</p>
+                  <p className="font-semibold text-white">
+                    {t("testimonials.client3")}
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -582,11 +587,10 @@ export default function Home() {
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 animate-fade-in-up">
-              Ready to Get Your Free Claim Evaluation?
+              {t("cta.title")}
             </h2>
             <p className="text-lg text-gray-200 leading-relaxed mb-8 max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
-              Don&apos;t wait to get the settlement you deserve. Contact us
-              today for a free, no-obligation evaluation of your claim.
+              {t("cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-400">
               <Button
@@ -597,7 +601,7 @@ export default function Home() {
               >
                 <Link href="tel:786-417-3869">
                   <Phone className="h-5 w-5 mr-2" />
-                  Call (786) 417-3869
+                  {t("hero.callNow")}
                 </Link>
               </Button>
               <Button
@@ -606,7 +610,7 @@ export default function Home() {
                 variant="outline"
                 className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                <Link href="/contact">Get Free Evaluation</Link>
+                <Link href="/contact">{t("hero.getFreeEvaluation")}</Link>
               </Button>
             </div>
           </div>
