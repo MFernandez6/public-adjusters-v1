@@ -340,7 +340,7 @@ export default function AboutPage() {
                     className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     size="lg"
                   >
-                    <Link href="/contact">Get Free Evaluation</Link>
+                    <Link href="/contact">{t("common.getFreeEvaluation")}</Link>
                   </Button>
                   <Button
                     asChild
@@ -350,7 +350,7 @@ export default function AboutPage() {
                   >
                     <Link href="tel:786-417-3869">
                       <Phone className="h-4 w-4 mr-2" />
-                      Call (786) 417-3869
+                      {t("common.callPhone")}
                     </Link>
                   </Button>
                 </div>

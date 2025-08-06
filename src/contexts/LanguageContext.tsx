@@ -98,6 +98,7 @@ const translations = {
     "services.claimReview": "Claim Review",
     "services.negotiation": "Negotiation",
     "services.appeals": "Appeals",
+    "services.commercialClaims": "Commercial Claims",
     "services.commercialClaimsDesc":
       "Business claims can quickly become complicated matters with layers of insurance coverage.",
     "services.residentialClaims": "Residential Claims",
@@ -455,6 +456,7 @@ const translations = {
     "services.claimReview": "Revisión de Reclamo",
     "services.negotiation": "Negociación",
     "services.appeals": "Apelaciones",
+    "services.commercialClaims": "Reclamos Comerciales",
     "services.commercialClaimsDesc":
       "Los reclamos comerciales pueden volverse rápidamente asuntos complicados con capas de cobertura de seguro.",
     "services.residentialClaims": "Reclamos Residenciales",
