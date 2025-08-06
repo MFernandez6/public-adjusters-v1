@@ -20,8 +20,11 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ServicesPage() {
+  const { t } = useLanguage();
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -59,12 +62,10 @@ export default function ServicesPage() {
             {/* Header */}
             <div className="text-center space-y-6 mb-12 animate-fade-in-up">
               <h1 className="text-4xl lg:text-5xl font-bold text-white">
-                Our Services
+                {t("services.title")}
               </h1>
               <p className="text-lg text-gray-200 leading-relaxed max-w-3xl mx-auto">
-                We handle all types of insurance claims to ensure you receive
-                the maximum settlement you deserve. No claim is too big or too
-                small.
+                {t("services.subtitle")}
               </p>
             </div>
 
@@ -72,10 +73,10 @@ export default function ServicesPage() {
             <section className="mb-16">
               <div className="text-center space-y-4 mb-12 animate-fade-in-up animation-delay-100">
                 <h2 className="text-3xl font-bold text-white">
-                  Property Damage Claims
+                  {t("services.propertyDamage")}
                 </h2>
                 <p className="text-lg text-gray-200">
-                  Comprehensive coverage for all types of property damage
+                  {t("services.propertyDamageSubtitle")}
                 </p>
               </div>
 
@@ -85,30 +86,31 @@ export default function ServicesPage() {
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                       <Flame className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     </div>
-                    <CardTitle className="text-white">Fire Damage</CardTitle>
+                    <CardTitle className="text-white">
+                      {t("services.fireDamage")}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-200 mb-4">
-                      Complete fire damage assessment and documentation. We
-                      ensure all damage is properly documented and valued.
+                      {t("services.fireDamageDesc")}
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Structural damage assessment
+                          {t("services.structuralDamageAssessment")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Smoke and soot damage
+                          {t("services.smokeSootDamage")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Personal property inventory
+                          {t("services.personalPropertyInventory")}
                         </span>
                       </li>
                     </ul>
@@ -120,30 +122,31 @@ export default function ServicesPage() {
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                       <Droplets className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     </div>
-                    <CardTitle className="text-white">Water Damage</CardTitle>
+                    <CardTitle className="text-white">
+                      {t("services.waterDamage")}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-200 mb-4">
-                      From burst pipes to storm flooding, we handle all water
-                      damage claims with expert assessment.
+                      {t("services.waterDamageDesc")}
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Flood damage assessment
+                          {t("services.floodDamageAssessment")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Mold remediation costs
+                          {t("services.moldRemediationCosts")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Structural drying documentation
+                          {t("services.structuralDryingDocumentation")}
                         </span>
                       </li>
                     </ul>
@@ -155,30 +158,31 @@ export default function ServicesPage() {
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                       <Wind className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     </div>
-                    <CardTitle className="text-white">Storm Damage</CardTitle>
+                    <CardTitle className="text-white">
+                      {t("services.stormDamage")}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-200 mb-4">
-                      Hurricane, tornado, and storm damage claims. We document
-                      all damage for maximum recovery.
+                      {t("services.stormDamageDesc")}
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Roof damage assessment
+                          {t("services.roofDamageAssessment")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Window and siding damage
+                          {t("services.windowSidingDamage")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Debris removal costs
+                          {t("services.debrisRemovalCosts")}
                         </span>
                       </li>
                     </ul>
@@ -191,10 +195,10 @@ export default function ServicesPage() {
             <section className="mb-16">
               <div className="text-center space-y-4 mb-12 animate-fade-in-up animation-delay-500">
                 <h2 className="text-3xl font-bold text-white">
-                  Business Claims
+                  {t("services.businessClaims")}
                 </h2>
                 <p className="text-lg text-gray-200">
-                  Protecting your business and livelihood
+                  {t("services.businessClaimsSubtitle")}
                 </p>
               </div>
 
@@ -205,37 +209,36 @@ export default function ServicesPage() {
                       <Building className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     </div>
                     <CardTitle className="text-white">
-                      Commercial Property
+                      {t("services.commercialProperty")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-200 mb-4">
-                      Complete commercial property damage assessment and
-                      business interruption claim handling.
+                      {t("services.commercialPropertyDesc")}
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Building damage assessment
+                          {t("services.buildingDamageAssessment")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Equipment and inventory loss
+                          {t("services.equipmentInventoryLoss")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Business interruption claims
+                          {t("services.businessInterruptionClaims")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Extra expense coverage
+                          {t("services.extraExpenseCoverage")}
                         </span>
                       </li>
                     </ul>
@@ -248,37 +251,36 @@ export default function ServicesPage() {
                       <DollarSign className="h-6 w-6 text-orange-400 drop-shadow-lg" />
                     </div>
                     <CardTitle className="text-white">
-                      Business Interruption
+                      {t("services.businessInterruption")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-200 mb-4">
-                      Maximize your business interruption claim to cover lost
-                      income and operating expenses.
+                      {t("services.businessInterruptionDesc")}
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Lost income calculation
+                          {t("services.lostIncomeCalculation")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Operating expense coverage
+                          {t("services.operatingExpenseCoverage")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Extended period of indemnity
+                          {t("services.extendedPeriodIndemnity")}
                         </span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-orange-400 drop-shadow-lg" />
                         <span className="text-gray-200">
-                          Contingent business interruption
+                          {t("services.contingentBusinessInterruption")}
                         </span>
                       </li>
                     </ul>
@@ -291,10 +293,10 @@ export default function ServicesPage() {
             <section className="mb-16">
               <div className="text-center space-y-4 mb-12 animate-fade-in-up animation-delay-800">
                 <h2 className="text-3xl font-bold text-white">
-                  Specialized Services
+                  {t("services.specializedServices")}
                 </h2>
                 <p className="text-lg text-gray-200">
-                  Expert handling of complex and specialized claims
+                  {t("services.specializedServicesDesc")}
                 </p>
               </div>
 
@@ -305,10 +307,10 @@ export default function ServicesPage() {
                       <Zap className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="font-semibold mb-2 text-white">
-                      Electrical Damage
+                      {t("services.electricalDamage")}
                     </h3>
                     <p className="text-sm text-gray-200">
-                      Power surge and electrical damage claims
+                      {t("services.electricalDamageDesc")}
                     </p>
                   </CardContent>
                 </Card>
@@ -319,10 +321,10 @@ export default function ServicesPage() {
                       <Car className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="font-semibold mb-2 text-white">
-                      Vehicle Damage
+                      {t("services.vehicleDamage")}
                     </h3>
                     <p className="text-sm text-gray-200">
-                      Comprehensive and collision claims
+                      {t("services.vehicleDamageDesc")}
                     </p>
                   </CardContent>
                 </Card>
@@ -333,10 +335,10 @@ export default function ServicesPage() {
                       <Home className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="font-semibold mb-2 text-white">
-                      Personal Property
+                      {t("services.personalProperty")}
                     </h3>
                     <p className="text-sm text-gray-200">
-                      Contents and personal property claims
+                      {t("services.personalPropertyDesc")}
                     </p>
                   </CardContent>
                 </Card>
@@ -347,10 +349,10 @@ export default function ServicesPage() {
                       <Shield className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="font-semibold mb-2 text-white">
-                      Liability Claims
+                      {t("services.liabilityClaims")}
                     </h3>
                     <p className="text-sm text-gray-200">
-                      Third-party liability and defense
+                      {t("services.liabilityClaimsDesc")}
                     </p>
                   </CardContent>
                 </Card>
@@ -361,12 +363,10 @@ export default function ServicesPage() {
             <section className="bg-white/10 backdrop-blur-md py-16 rounded-lg border border-white/20 animate-fade-in-up animation-delay-1300">
               <div className="text-center space-y-6">
                 <h2 className="text-3xl font-bold text-white">
-                  Need Help With Your Claim?
+                  {t("services.needHelpWithClaim")}
                 </h2>
                 <p className="text-lg text-gray-200 max-w-2xl mx-auto">
-                  Don&apos;t let insurance companies take advantage of you.
-                  Contact us today for a free claim evaluation and see how much
-                  more you could recover.
+                  {t("services.ctaDescription")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
@@ -374,7 +374,7 @@ export default function ServicesPage() {
                     className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     size="lg"
                   >
-                    <Link href="/contact">Get Free Evaluation</Link>
+                    <Link href="/contact">{t("common.getFreeEvaluation")}</Link>
                   </Button>
                   <Button
                     asChild
@@ -384,7 +384,7 @@ export default function ServicesPage() {
                   >
                     <Link href="tel:786-417-3869">
                       <Phone className="h-4 w-4 mr-2" />
-                      Call (786) 417-3869
+                      {t("common.callPhone")}
                     </Link>
                   </Button>
                 </div>

@@ -4,11 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Shield } from "lucide-react";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ContactPage() {
+  const { t } = useLanguage();
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -46,12 +49,10 @@ export default function ContactPage() {
             {/* Header */}
             <div className="text-center space-y-6 mb-12 animate-fade-in-up">
               <h1 className="text-3xl lg:text-4xl font-bold text-white">
-                Contact Us For A Free Claim Evaluation!
+                {t("contact.title")}
               </h1>
               <p className="text-lg text-gray-200 leading-relaxed max-w-3xl mx-auto">
-                Don&apos;t let insurance companies take advantage of you. Our
-                licensed public adjusters fight to maximize your claim
-                settlement and ensure you get the compensation you deserve.
+                {t("contact.subtitle")}
               </p>
             </div>
 
@@ -60,7 +61,7 @@ export default function ContactPage() {
               <Card className="shadow-xl border-0 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-left">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white">
-                    Send Us a Message
+                    {t("contact.sendMessage")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -71,7 +72,7 @@ export default function ContactPage() {
                           htmlFor="firstName"
                           className="text-sm font-medium text-white"
                         >
-                          First Name *
+                          {t("contact.firstName")} *
                         </label>
                         <Input
                           id="firstName"
@@ -84,7 +85,7 @@ export default function ContactPage() {
                           htmlFor="lastName"
                           className="text-sm font-medium text-white"
                         >
-                          Last Name *
+                          {t("contact.lastName")} *
                         </label>
                         <Input
                           id="lastName"
@@ -100,7 +101,7 @@ export default function ContactPage() {
                           htmlFor="phone"
                           className="text-sm font-medium text-white"
                         >
-                          Phone Number *
+                          {t("contact.phoneNumber")} *
                         </label>
                         <Input
                           id="phone"
@@ -114,7 +115,7 @@ export default function ContactPage() {
                           htmlFor="email"
                           className="text-sm font-medium text-white"
                         >
-                          Email Address *
+                          {t("contact.emailAddress")} *
                         </label>
                         <Input
                           id="email"
@@ -130,32 +131,32 @@ export default function ContactPage() {
                         htmlFor="claimType"
                         className="text-sm font-medium text-white"
                       >
-                        Type of Claim
+                        {t("contact.claimType")}
                       </label>
                       <select
                         id="claimType"
                         className="w-full px-3 py-2 border border-white/20 rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-white/20 text-white"
                       >
                         <option value="" className="text-gray-800">
-                          Select claim type
+                          {t("contact.selectClaimType")}
                         </option>
                         <option value="property" className="text-gray-800">
-                          Property Damage
+                          {t("contact.propertyDamage")}
                         </option>
                         <option value="business" className="text-gray-800">
-                          Business Interruption
+                          {t("contact.businessInterruption")}
                         </option>
                         <option value="storm" className="text-gray-800">
-                          Storm Damage
+                          {t("contact.stormDamage")}
                         </option>
                         <option value="fire" className="text-gray-800">
-                          Fire Damage
+                          {t("contact.fireDamage")}
                         </option>
                         <option value="water" className="text-gray-800">
-                          Water Damage
+                          {t("contact.waterDamage")}
                         </option>
                         <option value="other" className="text-gray-800">
-                          Other
+                          {t("contact.other")}
                         </option>
                       </select>
                     </div>
@@ -165,12 +166,12 @@ export default function ContactPage() {
                         htmlFor="message"
                         className="text-sm font-medium text-white"
                       >
-                        Describe Your Claim *
+                        {t("contact.describeClaim")} *
                       </label>
                       <Textarea
                         id="message"
                         rows={5}
-                        placeholder="Please provide details about your claim..."
+                        placeholder={t("contact.claimDetailsPlaceholder")}
                         required
                         className="bg-white/20 border-white/20 text-white placeholder:text-gray-300"
                       />
@@ -181,7 +182,7 @@ export default function ContactPage() {
                       className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                       size="lg"
                     >
-                      Send Message
+                      {t("contact.sendMessage")}
                     </Button>
                   </form>
                 </CardContent>
@@ -193,7 +194,7 @@ export default function ContactPage() {
                 <Card className="shadow-lg border-0 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-right">
                   <CardHeader>
                     <CardTitle className="text-xl text-white">
-                      Office Information
+                      {t("contact.officeInformation")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -227,10 +228,11 @@ export default function ContactPage() {
                         Claims@FernandezAdjusters.com
                       </a>
                     </div>
-                    <div className="pt-2">
-                      <p className="font-semibold text-primary-outline">
+                    <div className="flex items-center space-x-3">
+                      <Shield className="h-5 w-5 text-orange-400 drop-shadow-lg flex-shrink-0" />
+                      <span className="font-semibold text-white">
                         License: XXXXXXX
-                      </p>
+                      </span>
                     </div>
                   </CardContent>
                 </Card>
@@ -239,28 +241,28 @@ export default function ContactPage() {
                 <Card className="shadow-lg border-0 bg-white/10 backdrop-blur-md border border-white/20 animate-fade-in-right animation-delay-100">
                   <CardHeader>
                     <CardTitle className="text-xl text-white">
-                      Business Hours
+                      {t("contact.businessHours")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center space-x-3 mb-4">
                       <Clock className="h-5 w-5 text-orange-400 drop-shadow-lg flex-shrink-0" />
                       <span className="font-semibold text-white">
-                        Available 24/7 for Emergencies
+                        {t("contact.available247")}
                       </span>
                     </div>
                     <div className="space-y-2 text-sm text-gray-200">
                       <div className="flex justify-between">
-                        <span>Monday - Friday</span>
+                        <span>{t("contact.mondayFriday")}</span>
                         <span>8:00 AM - 6:00 PM</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>Saturday</span>
+                        <span>{t("contact.saturday")}</span>
                         <span>9:00 AM - 3:00 PM</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>Sunday</span>
-                        <span>Emergency Calls Only</span>
+                        <span>{t("contact.sunday")}</span>
+                        <span>{t("contact.emergencyCallsOnly")}</span>
                       </div>
                     </div>
                   </CardContent>
@@ -270,11 +272,10 @@ export default function ContactPage() {
                 <Card className="shadow-lg border-0 bg-primary text-primary-foreground animate-fade-in-right animation-delay-200">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-2">
-                      Emergency? Call Now!
+                      {t("contact.emergencyCall")}
                     </h3>
                     <p className="mb-4 opacity-90">
-                      If you&apos;ve experienced property damage, don&apos;t
-                      wait. Call us immediately for emergency response.
+                      {t("contact.emergencyDesc")}
                     </p>
                     <Button
                       asChild

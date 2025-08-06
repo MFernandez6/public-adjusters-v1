@@ -20,8 +20,11 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AboutPage() {
+  const { t } = useLanguage();
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -59,11 +62,10 @@ export default function AboutPage() {
             {/* Header */}
             <div className="text-center space-y-6 mb-16 animate-fade-in-up">
               <h1 className="text-4xl lg:text-5xl font-bold text-white">
-                About Fernandez Public Adjusters
+                {t("about.title")}
               </h1>
               <p className="text-lg text-gray-200 leading-relaxed max-w-3xl mx-auto">
-                Licensed public adjusters fighting for your rights and
-                maximizing your claim settlements since day one.
+                {t("about.subtitle")}
               </p>
             </div>
 
@@ -72,14 +74,13 @@ export default function AboutPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6 animate-fade-in-left">
                   <Badge variant="secondary" className="mb-4">
-                    Founder & Lead Adjuster
+                    {t("about.founderLeadAdjuster")}
                   </Badge>
                   <h2 className="text-3xl lg:text-4xl font-bold text-white">
                     Miguel Angel Fernandez
                   </h2>
                   <p className="text-lg text-gray-200">
-                    Licensed public adjuster with extensive legal and
-                    construction expertise
+                    {t("about.founderDescription")}
                   </p>
 
                   {/* Key Qualifications */}
@@ -87,25 +88,25 @@ export default function AboutPage() {
                     <div className="flex items-center space-x-3">
                       <GraduationCap className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                       <span className="text-sm font-medium text-white">
-                        Master of Science in Law & Policy
+                        {t("about.masterDegree")}
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Award className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                       <span className="text-sm font-medium text-white">
-                        Magna Cum Laude Graduate
+                        {t("about.magnaCumLaude")}
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Building className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                       <span className="text-sm font-medium text-white">
-                        Property Damage Specialist
+                        {t("about.propertyDamageSpecialist")}
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Scale className="h-5 w-5 text-orange-400 drop-shadow-lg" />
                       <span className="text-sm font-medium text-white">
-                        Legal & Insurance Experience
+                        {t("about.legalInsuranceExperience")}
                       </span>
                     </div>
                   </div>
@@ -115,7 +116,7 @@ export default function AboutPage() {
                       variant="outline"
                       className="text-white border-white/20"
                     >
-                      License: XXXXXXX
+                      {t("about.license")}
                     </Badge>
                   </div>
                 </div>
@@ -129,7 +130,9 @@ export default function AboutPage() {
                           MF
                         </span>
                       </div>
-                      <p className="text-gray-200">Professional Photo</p>
+                      <p className="text-gray-200">
+                        {t("about.professionalPhoto")}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -140,65 +143,29 @@ export default function AboutPage() {
             <section className="mb-20">
               <div className="max-w-4xl mx-auto">
                 <h3 className="text-2xl font-bold text-white mb-8 text-center animate-fade-in-up">
-                  Professional Background
+                  {t("about.professionalBackground")}
                 </h3>
                 <div className="prose prose-lg max-w-none">
                   <div className="space-y-6 text-gray-200 leading-relaxed">
                     <p>
-                      <strong className="text-primary-outline">
-                        Miguel Angel Fernandez
-                      </strong>{" "}
-                      was born in Lima, Peru, and raised in Miami, Florida. His
-                      early experiences in these diverse environments shaped his
-                      understanding of the complexities of culture, law, and
-                      community.
+                      <strong>Miguel Angel Fernandez</strong>{" "}
+                      {t("about.biographyIntro")}
                     </p>
 
                     <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg border-l-4 border-primary border border-white/20">
                       <h4 className="font-semibold text-white mb-3">
-                        Academic Excellence
+                        {t("about.academicExcellence")}
                       </h4>
                       <p className="text-gray-200">
-                        Miguel pursued his academic interests at Florida State
-                        University, where he earned a Bachelor&apos;s degree in
-                        Political Science. His passion for law led him to attend
-                        Barry University for law school. After a year, he made a
-                        strategic decision to transfer and focus on obtaining a
-                        Master of Science in Law and Policy, graduating{" "}
-                        <strong>magna cum laude</strong> with an impressive{" "}
-                        <strong>3.78 GPA</strong>.
+                        {t("about.academicExcellenceDesc")}
                       </p>
                     </div>
 
-                    <p>
-                      Throughout his career, Miguel has gained extensive
-                      experience working in various law firms, refining his
-                      legal skills. His expertise lies in construction defects,
-                      where he has successfully represented both private clients
-                      and insurance companies, adeptly navigating the
-                      intricacies of claims and ensuring just outcomes.
-                    </p>
+                    <p>{t("about.careerExperience")}</p>
 
-                    <p>
-                      Miguel&apos;s background is further enriched by his
-                      stepfather&apos;s lifelong career in the construction
-                      industry, specializing in kitchen cabinetry, marble tops,
-                      flooring, and various aspects of construction work. This
-                      familial connection has provided him with unique insights
-                      and a practical understanding of construction processes,
-                      enhancing his capability to serve clients effectively as a
-                      public adjuster.
-                    </p>
+                    <p>{t("about.constructionBackground")}</p>
 
-                    <p>
-                      With a combination of legal knowledge and hands-on
-                      experience in the construction field, Miguel Angel
-                      Fernandez is well-equipped to advocate for clients facing
-                      insurance claims. His commitment is to guide clients
-                      through the claims process with professionalism and
-                      dedication, ensuring they receive the compensation they
-                      deserve.
-                    </p>
+                    <p>{t("about.commitment")}</p>
                   </div>
                 </div>
               </div>
@@ -207,10 +174,11 @@ export default function AboutPage() {
             {/* Team Section */}
             <section className="mb-20">
               <div className="text-center space-y-4 mb-12 animate-fade-in-up">
-                <h2 className="text-3xl font-bold text-white">Our Team</h2>
+                <h2 className="text-3xl font-bold text-white">
+                  {t("about.ourTeam")}
+                </h2>
                 <p className="text-lg text-gray-200">
-                  Experienced professionals dedicated to maximizing your claim
-                  settlement
+                  {t("about.teamDescription")}
                 </p>
               </div>
 
@@ -221,11 +189,10 @@ export default function AboutPage() {
                       <Shield className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">
-                      Claims Specialists
+                      {t("about.claimsSpecialists")}
                     </h3>
                     <p className="text-gray-200">
-                      Expert adjusters with years of experience in property
-                      damage assessment and insurance claim negotiation.
+                      {t("about.claimsSpecialistsDesc")}
                     </p>
                   </CardContent>
                 </Card>
@@ -236,11 +203,10 @@ export default function AboutPage() {
                       <Award className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">
-                      Legal Experts
+                      {t("about.legalExperts")}
                     </h3>
                     <p className="text-gray-200">
-                      Legal professionals ensuring your rights are protected and
-                      claims are properly documented and presented.
+                      {t("about.legalExpertsDesc")}
                     </p>
                   </CardContent>
                 </Card>
@@ -251,11 +217,10 @@ export default function AboutPage() {
                       <Users className="h-8 w-8 text-orange-400 drop-shadow-lg" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">
-                      Client Advocates
+                      {t("about.clientAdvocates")}
                     </h3>
                     <p className="text-gray-200">
-                      Dedicated professionals committed to fighting for your
-                      rights and maximizing your claim settlement.
+                      {t("about.clientAdvocatesDesc")}
                     </p>
                   </CardContent>
                 </Card>
@@ -266,10 +231,10 @@ export default function AboutPage() {
             <section className="mb-20">
               <div className="text-center space-y-4 mb-12 animate-fade-in-up">
                 <h2 className="text-3xl font-bold text-white">
-                  Why Choose Us?
+                  {t("about.whyChooseUs")}
                 </h2>
                 <p className="text-lg text-gray-200">
-                  What sets us apart from other public adjusters
+                  {t("about.whyChooseUsDesc")}
                 </p>
               </div>
 
@@ -280,11 +245,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      Proven Results
+                      {t("about.provenResults")}
                     </h3>
                     <p className="text-gray-200">
-                      Track record of maximizing claim settlements and getting
-                      clients the compensation they deserve.
+                      {t("about.provenResultsDesc")}
                     </p>
                   </div>
                 </div>
@@ -295,11 +259,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      Licensed & Insured
+                      {t("about.licensedInsured")}
                     </h3>
                     <p className="text-gray-200">
-                      Fully licensed public adjusters with proper insurance
-                      coverage for your protection.
+                      {t("about.licensedInsuredDesc")}
                     </p>
                   </div>
                 </div>
@@ -310,11 +273,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      Personal Service
+                      {t("about.personalService")}
                     </h3>
                     <p className="text-gray-200">
-                      Direct access to your adjuster throughout the entire
-                      claims process.
+                      {t("about.personalServiceDesc")}
                     </p>
                   </div>
                 </div>
@@ -325,11 +287,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      Expert Knowledge
+                      {t("about.expertKnowledge")}
                     </h3>
                     <p className="text-gray-200">
-                      Deep understanding of insurance policies, construction,
-                      and the claims process.
+                      {t("about.expertKnowledgeDesc")}
                     </p>
                   </div>
                 </div>
@@ -340,10 +301,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      No Upfront Fees
+                      {t("about.noUpfrontFees")}
                     </h3>
                     <p className="text-gray-200">
-                      We only get paid when you get paid. No risk to you.
+                      {t("about.noUpfrontFeesDesc")}
                     </p>
                   </div>
                 </div>
@@ -354,11 +315,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      Client Satisfaction
+                      {t("about.clientSatisfaction")}
                     </h3>
                     <p className="text-gray-200">
-                      High client satisfaction rate with many repeat clients and
-                      referrals.
+                      {t("about.clientSatisfactionDesc")}
                     </p>
                   </div>
                 </div>
@@ -369,12 +329,10 @@ export default function AboutPage() {
             <section className="bg-white/10 backdrop-blur-md py-16 rounded-lg border border-white/20 animate-fade-in-up animation-delay-700">
               <div className="text-center space-y-6">
                 <h2 className="text-3xl font-bold text-white">
-                  Ready to Get Started?
+                  {t("about.readyToGetStarted")}
                 </h2>
                 <p className="text-lg text-gray-200 max-w-2xl mx-auto">
-                  Don&apos;t let insurance companies take advantage of you.
-                  Contact us today for a free claim evaluation and see how much
-                  more you could recover.
+                  {t("about.ctaDescription")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
